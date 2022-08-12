@@ -10,7 +10,7 @@ jobs:
     name: Build for Mac
     runs-on: macos-latest
     env:
-      PYTHONVERSION: 3.10
+      PYTHONVERSION: "3.10"
       MACOSX_DEPLOYMENT_TARGET: "10.9"
 
     steps:
