@@ -34,7 +34,7 @@ jobs:
       run: |
         python3 --version
         pip3 install --upgrade pip wheel
-        python3 pip install pyinstaller
+        pip3 install pyinstaller
         python3 -O -m pyinstaller DIP.spec
       
     - name: Log files
