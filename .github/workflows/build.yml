@@ -1,4 +1,4 @@
-name: Build and package Mac version
+name: Build and package the Mac version
 
 on:
   push:
