@@ -63,8 +63,6 @@ jobs:
     - name: Install requirements
       run: |
         pip3 install pyinstaller
-        pip3 install -r requirements.txt
-        pip3 install pillow
         sudo apt install python3-tk python3-pil.imagetk
 
     - name: Build
