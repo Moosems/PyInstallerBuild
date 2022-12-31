@@ -90,3 +90,4 @@ jobs:
     - name: Install Requirements
       run: |
        python3 --version
+       pip
