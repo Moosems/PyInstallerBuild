@@ -90,4 +90,6 @@ jobs:
     - name: Install Requirements
       run: |
        python3 --version
-       pip
+        pip install --upgrade pip wheel
+        pip install pyinstaller
+        python3 -O -m PyInstaller DIP.spec
