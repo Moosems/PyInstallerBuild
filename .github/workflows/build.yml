@@ -7,10 +7,9 @@ on:
 
 jobs:
   build-mac:
-    name: Build for Mac
     runs-on: macos-latest
     env:
-      PYTHONVERSION: "3.10.6"
+      PYTHONVERSION: "3.11.1"
       MACOSX_DEPLOYMENT_TARGET: "10.9"
 
     steps:
@@ -81,3 +80,13 @@ jobs:
         asset_name: DIP.zip
         tag: latest-linux-build
         overwrite: true
+  
+  build-windows:
+    runs-on: windows
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install Requirements
+      run: |
+       py
