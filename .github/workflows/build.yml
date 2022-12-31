@@ -82,7 +82,7 @@ jobs:
         overwrite: true
   
   build-windows:
-    runs-on: windows
+    runs-on: windows-latest
     
     steps:
     - uses: actions/checkout@v2
