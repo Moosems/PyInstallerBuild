@@ -89,4 +89,4 @@ jobs:
     
     - name: Install Requirements
       run: |
-       py
+       python3 --version
