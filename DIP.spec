@@ -50,7 +50,7 @@ coll = COLLECT(
 )
 app = BUNDLE(
     coll,
-    name='DIP',
+    name='DIP.app',
     icon=None,
     bundle_identifier=None,
 )
