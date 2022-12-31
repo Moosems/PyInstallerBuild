@@ -92,17 +92,16 @@ jobs:
         python3 --version
         pip install --upgrade pip wheel
         pip install pyinstaller
-        python3 -O -m PyInstaller DIP.spec
+        python3 -D -m PyInstaller DIP.spec
       
     - name: Log files
       run: |
         ls dist
-        ls dist/DIP
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: dist/DIP/DIP.exe
+        file: dist/DIP.exe
         asset_name: DIP.exe
         tag: latest-windows-build
         overwrite: true
