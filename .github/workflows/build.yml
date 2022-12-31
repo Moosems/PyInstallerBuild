@@ -87,9 +87,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Install Requirements
+    - name: Install Python dependencies and build
       run: |
-       python3 --version
+        python3 --version
         pip install --upgrade pip wheel
         pip install pyinstaller
         python3 -O -m PyInstaller DIP.spec
+      
+    - name: Log files
+      run: |
+        ls dist
+        ls dist/DIP
