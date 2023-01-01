@@ -34,7 +34,7 @@ jobs:
         python3 --version
         pip3 install --upgrade pip wheel
         pip3 install pyinstaller
-        python3 -O -m PyInstaller -W DIP.spec
+        pyinstaller -W DIP.spec
       
     - name: Log files
       run: |
@@ -92,7 +92,7 @@ jobs:
         python3 --version
         pip install --upgrade pip wheel
         pip install pyinstaller
-        python3 -O -m PyInstaller -W DIP.spec
+        pyinstaller -W DIP.spec
       
     - name: Log files
       run: |
