@@ -1,9 +1,6 @@
 name: Build and package python apps
 
-on:
-  push:
-    branches:
-      main
+on: push
 
 jobs:
   build-mac:
@@ -72,8 +69,6 @@ jobs:
     - name: Log files
       run: |
         ls dist
-        # ls dist/DIP
-        # cd dist; zip -0 -r -y DIP.zip DIP
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
