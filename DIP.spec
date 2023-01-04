@@ -1,7 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
 
-build_mode = os.environ.get('PYI_BUILD_MODE', 'onefile')
+build_mode = os.environ.get('PYI_BUILD_MODE', 'onedir')
 block_cipher = None
 
 a = Analysis(
