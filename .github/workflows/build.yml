@@ -11,7 +11,7 @@ jobs:
     env:
       PYTHONVERSION: "3.11.1"
       MACOSX_DEPLOYMENT_TARGET: "10.9"
-      PYI_BUILD_MODE = "onedir"
+      PYI_BUILD_MODE: "onedir"
 
     steps:
     - uses: actions/checkout@v2
@@ -57,7 +57,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     env:
-      PYI_BUILD_MODE = "onedir"
+      PYI_BUILD_MODE: "onedir"
 
     steps:
     - uses: actions/checkout@v2
@@ -87,7 +87,7 @@ jobs:
   build-windows:
     runs-on: windows-latest
     env:
-      PYI_BUILD_MODE = "onefile"
+      PYI_BUILD_MODE: "onefile"
     
     steps:
     - uses: actions/checkout@v2
