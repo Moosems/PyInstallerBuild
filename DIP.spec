@@ -27,7 +27,7 @@ if build_mode == "onedir":
         pyz,
         a.scripts,
         [],
-        exclude_binaries=True,
+        exclude_binaries=False,
         name='DIP',
         debug=False,
         bootloader_ignore_signals=False,
