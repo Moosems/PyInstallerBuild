@@ -5,7 +5,7 @@ build_mode = os.environ.get('PYI_BUILD_MODE', 'onedir')
 block_cipher = None
 
 a = Analysis(
-    ['DIP.py'],
+    ['app.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -28,7 +28,7 @@ if build_mode == "onedir":
         a.scripts,
         [],
         exclude_binaries=True,
-        name='DIP',
+        name='app',
         debug=False,
         bootloader_ignore_signals=False,
         strip=False,
@@ -48,7 +48,7 @@ if build_mode == "onedir":
         strip=False,
         upx=True,
         upx_exclude=[],
-        name='DIP',
+        name='app',
     )
     bundle_type = coll
 else:
@@ -60,7 +60,7 @@ else:
         a.datas,
         [],
         exclude_binaries=False,
-        name='DIP',
+        name='app',
         debug=False,
         bootloader_ignore_signals=False,
         strip=False,
@@ -76,7 +76,7 @@ else:
 
 app = BUNDLE(
     bundle_type,
-    name='DIP.app',
+    name='app.app',
     icon=None,
     bundle_identifier=None,
 )
