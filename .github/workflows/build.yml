@@ -32,21 +32,21 @@ jobs:
         python3 --version
         pip3 install --upgrade pip wheel
         pip3 install pyinstaller
-        pyinstaller DIP.spec
+        pyinstaller app.spec
       
     - name: Log files
       run: |
         ls dist
-        ls dist/DIP
-        mkdir DIP
-        mv ./dist/DIP.app ./DIP/DIP.app
-        hdiutil create -srcfolder ./DIP DIP.dmg
+        ls dist/app
+        mkdir app
+        mv ./dist/app.app ./app/app.app
+        hdiutil create -srcfolder ./app app.dmg
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: DIP.dmg
-        asset_name: DIP.dmg
+        file: app.dmg
+        asset_name: app.dmg
         tag: latest-mac-build
         overwrite: true
         
@@ -64,7 +64,7 @@ jobs:
         sudo apt install python3-tk python3-pil.imagetk
 
     - name: Build
-      run: pyinstaller DIP.spec
+      run: pyinstaller app.spec
       
     - name: Log files
       run: |
@@ -73,8 +73,8 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: dist/DIP
-        asset_name: DIP
+        file: dist/app
+        asset_name: app
         tag: latest-linux-build
         overwrite: true
   
@@ -91,7 +91,7 @@ jobs:
         python3 --version
         pip install --upgrade pip wheel
         pip install pyinstaller
-        pyinstaller DIP.spec
+        pyinstaller app.spec
       
     - name: Log files
       run: |
@@ -100,7 +100,7 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: dist/DIP.exe
-        asset_name: DIP.exe
+        file: dist/app.exe
+        asset_name: app.exe
         tag: latest-windows-build
         overwrite: true
