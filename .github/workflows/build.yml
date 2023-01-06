@@ -47,7 +47,7 @@ jobs:
       with:
         file: app.dmg
         asset_name: app.dmg
-        tag: latest-mac-build
+        tag: latest-builds
         overwrite: true
         
   build-linux:
@@ -75,7 +75,7 @@ jobs:
       with:
         file: dist/app
         asset_name: app
-        tag: latest-linux-build
+        tag: latest-builds
         overwrite: true
   
   build-windows:
@@ -102,5 +102,5 @@ jobs:
       with:
         file: dist/app.exe
         asset_name: app.exe
-        tag: latest-windows-build
+        tag: latest-builds
         overwrite: true
